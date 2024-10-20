@@ -37,9 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             fallback={<GlobalError reset={() => window.location.reload()} />}
           >
             <TanStackQueryProvider>
-              <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-                <RouteChangesProvider>{children}</RouteChangesProvider>
-              </ThemeProvider>
+              <RouteChangesProvider>{children}</RouteChangesProvider>
             </TanStackQueryProvider>
           </ErrorBoundary>
         </Suspense>

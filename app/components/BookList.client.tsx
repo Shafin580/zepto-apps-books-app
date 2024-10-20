@@ -50,7 +50,7 @@ const BookList = ({
       const data = await getBookList({ page: page, search: debouncedSearchText, topic: selectedGenre })
       return data
     },
-    initialData: initialData,
+    // initialData: initialData,
   })
 
   useEffect(() => {

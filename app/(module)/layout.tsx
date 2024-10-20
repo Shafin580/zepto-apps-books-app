@@ -1,4 +1,3 @@
-import Footer from "@components/globals/Footer"
 import Navbar from "@components/globals/Navbar"
 import { QueryClient } from "@tanstack/react-query"
 import { Metadata } from "next"
@@ -23,7 +22,6 @@ const WebUILayout = async ({ children }: { children: React.ReactNode }) => {
     <div>
         <Navbar />
         <main className="min-h-[80dvh] pt-[5.5rem]">{children}</main>
-        <Footer />
     </div>
   )
 }

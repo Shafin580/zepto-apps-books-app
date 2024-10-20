@@ -35,7 +35,7 @@ export default function CardBook({
   return (
     <>
       <Link href={href} className={cn("group/card product-card", className)}>
-        <Card className="group-hover/card:bg-mute overflow-clip rounded-2xl transition-all hover:shadow">
+        <Card className="group-hover/card:bg-mute overflow-clip rounded-2xl transition-all hover:shadow h-full">
           {/*//+ Image Container */}
           <div className="img-container relative h-40 w-full overflow-clip">
             <Image
@@ -50,7 +50,7 @@ export default function CardBook({
             />
           </div>
           {/*//+ Info Container */}
-          <div className="info grid h-60 p-4 md:grid-cols-4">
+          <div className="info grid min-h-60 p-4 md:grid-cols-4">
             <div className="flex flex-col justify-between space-y-2 md:col-span-3">
               <div className="text-xs text-muted-foreground">Author: {authorName}</div>
               <div className="text-base">Book Id: {id}</div>

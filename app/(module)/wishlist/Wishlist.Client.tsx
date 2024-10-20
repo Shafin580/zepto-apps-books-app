@@ -3,9 +3,6 @@
 import CardBook from "@components/globals/CardBook"
 import Section from "@components/globals/Section"
 import SkeletonCard from "@components/Skeleton/SkeletonCard"
-import TextField from "@library/TextField"
-import { Button } from "@shad/button"
-import { Combobox } from "@shad/combobox"
 import { useQuery } from "@tanstack/react-query"
 import { getDataFromIndexedDB } from "@utils/misc"
 import { QUERY } from "query.config"
@@ -42,6 +39,7 @@ const Wishlist = () => {
         })
         return data
       },
+      enabled: cachedData.length > 0,
     })
 
     useEffect(() => {
