@@ -12,19 +12,7 @@ import { LINKS } from "router.config"
 import { getBookList } from "services/api/api"
 import SkeletonCard from "./Skeleton/SkeletonCard"
 
-const BookList = ({
-  initialData,
-}: {
-  initialData: {
-    status: number
-    data: BookListProps[]
-    paginationData: {
-      count: number
-      next: string | null
-      previous: string | null
-    } | null
-  }
-}) => {
+const BookList = () => {
   const [bookList, setBookList] = useState<BookListProps[]>([])
   const [page, setPage] = useState(1)
   const [selectedGenre, setSelectedGenre] = useState<string>("")
